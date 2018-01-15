@@ -1,0 +1,37 @@
+{
+  "name": "flt",
+  "version": "0.1.0",
+  "description": "Format, Lint, Test",
+  "author": "Garth Poitras <garth22@gmail.com>",
+  "license": "MIT",
+  "main": "index.js",
+  "bin": "src/bin.js",
+  "keywords": [
+    "format",
+    "lint",
+    "test"
+  ],
+  "scripts": {
+    "test": "prettier 'src/**/*.js' --write && eslint 'src/**/*.js' --fix",
+    "test-flt": "flt all -r"
+  },
+  "dependencies": {
+    "eslint": "^4.15.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-config-standard": "^11.0.0-beta.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-node": "^5.2.1",
+    "eslint-plugin-prettier": "^2.4.0",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "mocha": "^4.1.0",
+    "prettier": "^1.10.2",
+    "yargs": "^10.1.1"
+  },
+  "prettier": {
+    "printWidth": 120,
+    "semi": false,
+    "singleQuote": true,
+    "jsxBracketSameLine": true
+  }
+}
