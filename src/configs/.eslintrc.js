@@ -1,3 +1,5 @@
+const prettierrc = require('./.prettierrc')
+
 module.exports = {
   env: {
     node: true,
@@ -10,6 +12,6 @@ module.exports = {
     'no-console': 'warn',
     'prefer-const': 'error',
     'no-param-reassign': 'error',
-    'prettier/prettier': 'error'
+    'prettier/prettier': ['error', prettierrc]
   }
 }
