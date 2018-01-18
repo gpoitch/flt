@@ -10,27 +10,28 @@ I was tired of installing ~10 dependenies and copying the same scripts into ever
 Run format, lint & test with recommended options:
 
 ```bash
-$ flt all -r
+$ flt
 ```
 
 Run just formatting (prettier) with recommended options:
 
 ```bash
-$ flt format -r
+$ flt format
 ```
 
 Run just linting (eslint) with recommended options:
 
 ```bash
-$ flt lint -r
+$ flt lint
 ```
 
 Run just tests (mocha) with recommended options:
 
 ```bash
-$ flt test -r
+$ flt test
 ```
 
-If you omit the recommended flag, you can then just add your own arguments and they get passed through to the underlying module. e.g.:
+If you supply your own arguments, they get passed through to the underlying module instead of the recommended options. Which is still a convenience because you only need to install the `flt` dependency instead of everything else.
 
 `flt format *.js --single-quote` is the same as running `prettier *.js --single-quote`
+
