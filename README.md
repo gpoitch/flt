@@ -34,4 +34,3 @@ $ flt test
 If you supply your own arguments, they get passed through to the underlying module instead of the recommended options. Which is still a convenience because you only need to install the `flt` dependency instead of everything else.
 
 `flt format *.js --single-quote` is the same as running `prettier *.js --single-quote`
-

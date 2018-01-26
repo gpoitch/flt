@@ -1,8 +1,6 @@
 const format = require('./format')
 const lint = require('./lint')
 const test = require('./test')
-const all = require('./all')
-const { useRecommended } = require('./utils')
 
 const cli = require('yargs')
   .command('', 'Format, lint & test your code')
@@ -11,8 +9,10 @@ const cli = require('yargs')
   .command('test', 'Test your code with mocha', {}, test)
 
 const argv = cli.argv
-if (useRecommended(argv)) {
-  all(argv)
+if (!argv._[0]) {
+  format(argv)
+  lint(argv)
+  test(argv)
 }
 
 module.exports = cli

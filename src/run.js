@@ -1,5 +1,10 @@
 const { spawnSync } = require('child_process')
-const { useRecommended } = require('./utils')
+
+function useRecommended(argv) {
+  const commands = argv._
+  const mainCommand = commands[0]
+  return !mainCommand || (commands.length === 1 && ['format', 'lint', 'test'].indexOf(mainCommand) === 0)
+}
 
 function run(command, argv, recommendedArgs) {
   const args = useRecommended(argv) ? recommendedArgs : process.argv.slice(3).join(' ')
