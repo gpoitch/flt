@@ -3,7 +3,7 @@ const { spawnSync } = require('child_process')
 function useRecommended(argv) {
   const commands = argv._
   const mainCommand = commands[0]
-  return !mainCommand || (commands.length === 1 && ['format', 'lint', 'test'].indexOf(mainCommand) === 0)
+  return !mainCommand || (commands.length === 1 && ['format', 'lint', 'test'].indexOf(mainCommand) > -1)
 }
 
 function run(command, argv, recommendedArgs) {
