@@ -9,8 +9,7 @@ function useRecommended(argv) {
 function run(command, argv, recommendedArgs) {
   const args = useRecommended(argv) ? recommendedArgs : process.argv.slice(3).join(' ')
   const commandWithArgs = `${command} ${args}`
-
-  console.log(`\n[FLT]: ${commandWithArgs}\n`) // eslint-disable-line no-console
+  console.log(`\n\x1b[36m[FLT]\x1b[0m ${commandWithArgs}\n`) // eslint-disable-line no-console
   return spawnSync(commandWithArgs, { shell: true, stdio: 'inherit' })
 }
 

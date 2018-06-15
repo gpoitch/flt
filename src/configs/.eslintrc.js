@@ -6,11 +6,11 @@ module.exports = {
   },
   extends: ['standard', 'prettier'],
   rules: {
-    'no-console': 'error',
-    'prefer-const': 'error',
-    'no-param-reassign': 'error',
     'dot-notation': 'error',
+    'no-console': 'error',
+    'no-param-reassign': 'error',
+    'no-unused-vars': ['error', { vars: 'all', args: 'after-used', ignoreRestSiblings: true }],
     'object-shorthand': 'error',
-    'no-unused-vars': ['error', { vars: 'all', args: 'after-used', ignoreRestSiblings: true }]
+    'prefer-const': 'error'
   }
 }
