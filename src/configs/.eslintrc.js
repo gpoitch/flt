@@ -4,13 +4,23 @@ module.exports = {
     browser: true,
     mocha: true
   },
-  extends: ['standard', 'prettier'],
+  extends: ['plugin:react/recommended', 'standard', 'prettier'],
+  plugins: ['css-modules'],
   rules: {
     'dot-notation': 'error',
     'no-console': 'error',
     'no-param-reassign': 'error',
     'no-unused-vars': ['error', { vars: 'all', args: 'after-used', ignoreRestSiblings: true }],
     'object-shorthand': 'error',
-    'prefer-const': 'error'
+    'prefer-const': 'error',
+    'prefer-object-spread': 'error',
+    'react/prefer-stateless-function': 'error',
+    'react/no-array-index-key': 'error',
+    'react/no-typos': 'error',
+    'react/no-unknown-property': ['error', { ignore: ['class', 'for'] }],
+    'react/no-deprecated': 'warn',
+    'react/no-unescaped-entities': 'off',
+    'react/react-in-jsx-scope': 'off',
+    'react/prop-types': 'off'
   }
 }
