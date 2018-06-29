@@ -1,5 +1,7 @@
  const assert = require('assert')
 
+ const testEslinttUnderstandsDynamicImportSyntax = import('foo')
+
  function   unformattedAndUnlinted ( arg1, arg2)  {
   arg2=2
   let x=5

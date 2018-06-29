@@ -4,6 +4,7 @@ module.exports = {
     browser: true,
     mocha: true
   },
+  parser: 'babel-eslint',
   extends: ['plugin:react/recommended', 'standard', 'prettier'],
   plugins: ['css-modules'],
   rules: {
