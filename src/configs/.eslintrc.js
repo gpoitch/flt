@@ -7,6 +7,7 @@ module.exports = {
   parser: 'babel-eslint',
   extends: ['plugin:react/recommended', 'standard', 'prettier'],
   plugins: ['css-modules'],
+  settings: { react: { version: '16.0' } },
   rules: {
     'dot-notation': 'error',
     'no-console': 'error',
