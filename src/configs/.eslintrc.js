@@ -24,5 +24,12 @@ module.exports = {
     'react/no-unescaped-entities': 'off',
     'react/react-in-jsx-scope': 'off',
     'react/prop-types': 'off'
+  },
+  overrides: {
+    files: ['**/*.ts'],
+    parser: 'typescript-eslint-parser',
+    rules: {
+      'no-undef': 'off'
+    }
   }
 }
