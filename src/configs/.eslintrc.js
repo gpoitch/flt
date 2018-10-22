@@ -26,10 +26,15 @@ module.exports = {
     'react/prop-types': 'off'
   },
   overrides: {
-    files: ['**/*.ts'],
+    files: ['**.ts'],
     parser: 'typescript-eslint-parser',
     rules: {
       'no-undef': 'off'
+    },
+    parserOptions: {
+      ecmaFeatures: {
+        jsx: false // TODO: e.g. <string> is ambiguous and could be jsx
+      }
     }
   }
 }

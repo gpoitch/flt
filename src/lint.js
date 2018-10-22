@@ -10,7 +10,7 @@ const hasOwnConfig =
   Boolean(require(join(pwd, 'package.json')).eslintConfig)
 
 const command = 'DEBUG=eslint:cli-engine eslint'
-const recommendedArgs = `. --ignore-path .gitignore \`[ -z "$CI" ] && echo '--cache --fix'\` ${
+const recommendedArgs = `. --ext .js,.ts --ignore-path .gitignore \`[ -z "$CI" ] && echo '--cache --fix'\` ${
   hasOwnConfig ? '' : '--config ' + configPath
 }`
 
