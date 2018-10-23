@@ -28,13 +28,9 @@ module.exports = {
   overrides: {
     files: ['**.ts'],
     parser: 'typescript-eslint-parser',
+    plugins: ['typescript'],
     rules: {
-      'no-undef': 'off'
-    },
-    parserOptions: {
-      ecmaFeatures: {
-        jsx: false // TODO: e.g. <string> is ambiguous and could be jsx
-      }
+      'typescript/no-unused-vars': 'error'
     }
   }
 }

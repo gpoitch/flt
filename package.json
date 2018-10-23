@@ -1,6 +1,6 @@
 {
   "name": "flt",
-  "version": "0.7.1",
+  "version": "0.8.0",
   "description": "Format, Lint, Test",
   "author": "Garth Poitras <garth22@gmail.com>",
   "license": "MIT",
@@ -13,25 +13,30 @@
     "test"
   ],
   "scripts": {
-    "test": "prettier '{src/**/*.js,README.md}' --config src/configs/.prettierrc.js --write && DEBUG=eslint:cli-engine eslint 'src/**/*.js' --config src/configs/.eslintrc.js --fix",
+    "test": "prettier '{src/**/*.{js,ts},README.md}' --config src/configs/.prettierrc.js --write && DEBUG=eslint:cli-engine eslint 'src/**/*.{js,ts}' --config src/configs/.eslintrc.js --fix",
     "test-flt-all": "flt",
     "test-flt-single": "flt format",
     "test-flt-args": "flt format test/*.js --single-quote"
   },
   "dependencies": {
     "babel-eslint": "^10.0.1",
-    "eslint": "^5.7.0",
-    "eslint-config-prettier": "^3.1.0",
+    "eslint": "^5.9.0",
+    "eslint-config-prettier": "^3.3.0",
     "eslint-config-standard": "^12.0.0-alpha.0",
     "eslint-plugin-css-modules": "^2.10.0",
     "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-node": "^7.0.1",
+    "eslint-plugin-node": "^8.0.0",
     "eslint-plugin-promise": "^4.0.1",
     "eslint-plugin-react": "^7.11.1",
     "eslint-plugin-standard": "^4.0.0",
+    "eslint-plugin-typescript": "^0.13.0",
     "mocha": "^5.2.0",
-    "prettier": "^1.14.3",
-    "typescript-eslint-parser": "^20.0.0",
+    "prettier": "^1.15.2",
+    "typescript-eslint-parser": "^21.0.0",
     "yargs": "^12.0.2"
+  },
+  "optionalDependencies": {
+    "typescript": "*",
+    "react": "*"
   }
 }
