@@ -9,6 +9,12 @@ module.exports = {
     before: true,
     after: true
   },
+  settings: {
+    react: { version: 'detect' },
+    'import/resolver': {
+      node: { extensions: ['.js', '.json', '.ts'] }
+    }
+  },
   extends: [
     'plugin:import/errors',
     'plugin:@typescript-eslint/recommended',
@@ -37,6 +43,8 @@ module.exports = {
     'react/no-unescaped-entities': 'off',
     'react/react-in-jsx-scope': 'off',
     'react/prop-types': 'off',
-    '@typescript-eslint/no-var-requires': 'off'
+    '@typescript-eslint/no-var-requires': 'off',
+    '@typescript-eslint/explicit-function-return-type': 'off',
+    '@typescript-eslint/explicit-member-accessibility': 'off'
   }
 }
