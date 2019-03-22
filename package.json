@@ -7,6 +7,9 @@
   "repository": "https://github.com/gpoitch/flt.git",
   "main": "src/index.js",
   "bin": "src/bin.js",
+  "files": [
+    "src"
+  ],
   "keywords": [
     "format",
     "lint",
