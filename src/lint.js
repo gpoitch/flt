@@ -3,7 +3,7 @@ const { existsSync } = require('fs')
 const run = require('./run')
 const configPath = require.resolve('./configs/.eslintrc.js')
 
-const pwd = process.env.PWD
+const pwd = process.cwd()
 const hasOwnConfig =
   existsSync(join(pwd, '.eslintrc.js')) ||
   existsSync(join(pwd, '.eslintrc')) ||

@@ -1,6 +1,6 @@
 {
   "name": "flt",
-  "version": "0.11.1",
+  "version": "0.11.2",
   "description": "Format, Lint, Test",
   "author": "Garth Poitras <garth22@gmail.com>",
   "license": "MIT",
