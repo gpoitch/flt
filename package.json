@@ -1,6 +1,6 @@
 {
   "name": "flt",
-  "version": "0.12.1",
+  "version": "0.12.2",
   "description": "Format, Lint, Test",
   "author": "Garth Poitras <garth22@gmail.com>",
   "license": "MIT",
@@ -17,13 +17,13 @@
   ],
   "scripts": {
     "test": "prettier '{src/**/*.{js,ts},README.md}' --config src/configs/.prettierrc.js --write && DEBUG=eslint:cli-engine eslint 'src/**/*.{js,ts}' --config src/configs/.eslintrc.js --fix",
-    "test-flt-all": "flt",
-    "test-flt-single": "flt format",
-    "test-flt-args": "flt format test/*.js --single-quote"
+    "test-flt-all": "./src/bin.js",
+    "test-flt-single": "./src/bin.js format",
+    "test-flt-args": "./src/bin.js format test/*.js --single-quote"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^1.5.0",
-    "@typescript-eslint/parser": "^1.5.0",
+    "@typescript-eslint/eslint-plugin": "^1.6.0",
+    "@typescript-eslint/parser": "^1.6.0",
     "eslint": "^5.16.0",
     "eslint-config-prettier": "^4.1.0",
     "eslint-config-standard": "^12.0.0",
