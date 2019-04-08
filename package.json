@@ -1,6 +1,6 @@
 {
   "name": "flt",
-  "version": "0.12.2",
+  "version": "0.12.3",
   "description": "Format, Lint, Test",
   "author": "Garth Poitras <garth22@gmail.com>",
   "license": "MIT",
@@ -33,7 +33,7 @@
     "eslint-plugin-promise": "^4.1.1",
     "eslint-plugin-react": "^7.12.4",
     "eslint-plugin-standard": "^4.0.0",
-    "mocha": "^6.0.2",
+    "mocha": "^6.1.2",
     "prettier": "^1.16.4",
     "yargs": "^13.2.2"
   },
