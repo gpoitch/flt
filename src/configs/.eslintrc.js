@@ -25,7 +25,7 @@ module.exports = {
     'prettier/react',
     'prettier/@typescript-eslint'
   ],
-  plugins: ['@typescript-eslint', 'css-modules'],
+  plugins: ['@typescript-eslint', 'css-modules', 'react-hooks'],
   rules: {
     'dot-notation': 'error',
     'no-console': 'error',
@@ -43,6 +43,7 @@ module.exports = {
     'react/no-unescaped-entities': 'off',
     'react/react-in-jsx-scope': 'off',
     'react/prop-types': 'off',
+    'react-hooks/rules-of-hooks': 'error',
     '@typescript-eslint/no-unused-vars': 'off',
     '@typescript-eslint/no-var-requires': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',
