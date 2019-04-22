@@ -6,7 +6,7 @@ const configPath = !hasOwnFormatConfig && require.resolve('./configs/.prettierrc
 const recommendedArgs = [
   '"**/*.{js,ts,css,html,json,md,graphql}"',
   '--ignore-path .gitignore',
-  !hasOwnFormatConfig && '--config ' + configPath,
+  !hasOwnFormatConfig && `--config "${configPath}"`,
   process.env.CI ? '--check' : '--write'
 ]
   .filter(Boolean)

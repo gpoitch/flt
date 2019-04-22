@@ -6,7 +6,7 @@ const configPath = !hasOwnLintConfig && require.resolve('./configs/.eslintrc.js'
 const recommendedArgs = [
   '. --ext .js,.ts',
   '--ignore-path .gitignore',
-  !hasOwnLintConfig && '--config ' + configPath,
+  !hasOwnLintConfig && `--config "${configPath}"`,
   !process.env.CI && '--cache --fix'
 ]
   .filter(Boolean)
