@@ -7,7 +7,9 @@ module.exports = {
     describe: true,
     it: true,
     before: true,
-    after: true
+    after: true,
+    beforeEach: true,
+    afterEach: true
   },
   settings: {
     react: { version: 'detect' },
