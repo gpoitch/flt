@@ -37,6 +37,7 @@ module.exports = {
     'object-shorthand': 'error',
     'prefer-const': 'error',
     'prefer-object-spread': 'error',
+    'lines-between-class-members': 'off',
     'css-modules/no-undef-class': 'error',
     'react/prefer-stateless-function': 'error',
     'react/no-array-index-key': 'error',
