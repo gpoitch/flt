@@ -1,7 +1,13 @@
 module.exports = {
   parser: '@typescript-eslint/parser',
-  parserOptions: { jsx: true },
-  env: { node: true, browser: true },
+  parserOptions: { jsx: true, sourceType: 'module' },
+  env: { browser: true, node: true, es6: true },
+  settings: {
+    react: { version: 'detect' },
+    node: {
+      tryExtensions: ['.js', '.json', '.ts']
+    }
+  },
   globals: {
     // mocha (sans 'context')
     describe: true,
@@ -11,46 +17,41 @@ module.exports = {
     beforeEach: true,
     afterEach: true
   },
-  settings: {
-    react: { version: 'detect' },
-    'import/resolver': {
-      node: { extensions: ['.js', '.json', '.ts'] }
-    }
-  },
   extends: [
-    'plugin:import/errors',
+    'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:react/recommended',
-    'standard',
     'prettier',
-    'prettier/standard',
     'prettier/react',
     'prettier/@typescript-eslint'
   ],
-  plugins: ['@typescript-eslint', 'css-modules', 'react-hooks'],
+  plugins: ['@typescript-eslint', 'node', 'css-modules', 'react-hooks'],
   rules: {
-    'dot-notation': 'error',
+    // Enforce
     'no-console': 'error',
     'no-param-reassign': 'error',
-    'no-unused-vars': ['error', { vars: 'all', args: 'after-used', ignoreRestSiblings: true }],
     'no-var': 'error',
     'object-shorthand': 'error',
     'prefer-const': 'error',
     'prefer-object-spread': 'error',
-    'lines-between-class-members': 'off',
+    'node/no-missing-import': 'error',
+    'node/no-missing-require': 'error',
+    'node/no-deprecated-api': 'error',
     'css-modules/no-undef-class': 'error',
     'react/prefer-stateless-function': 'error',
     'react/no-array-index-key': 'error',
     'react/no-typos': 'error',
-    'react/no-unknown-property': ['error', { ignore: ['class', 'for'] }],
+    'react-hooks/rules-of-hooks': 'error',
+    '@typescript-eslint/no-unused-vars': ['error', { vars: 'all', args: 'after-used', ignoreRestSiblings: true }],
+    // Disable (i.e. override extends)
     'react/no-unescaped-entities': 'off',
     'react/react-in-jsx-scope': 'off',
     'react/prop-types': 'off',
-    'react-hooks/rules-of-hooks': 'error',
+    '@typescript-eslint/camelcase': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',
-    '@typescript-eslint/explicit-member-accessibility': 'off',
-    '@typescript-eslint/no-unused-vars': 'off',
+    '@typescript-eslint/no-explicit-any': 'off',
     '@typescript-eslint/no-use-before-define': 'off',
-    '@typescript-eslint/no-var-requires': 'off'
+    '@typescript-eslint/no-var-requires': 'off',
+    '@typescript-eslint/no-empty-function': 'off'
   }
 }
