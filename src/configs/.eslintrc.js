@@ -44,6 +44,7 @@ module.exports = {
     'react-hooks/rules-of-hooks': 'error',
     '@typescript-eslint/no-unused-vars': ['error', { vars: 'all', args: 'after-used', ignoreRestSiblings: true }],
     // Disable (i.e. override extends)
+    'prefer-rest-params': 'off',
     'react/no-unescaped-entities': 'off',
     'react/react-in-jsx-scope': 'off',
     'react/prop-types': 'off',
