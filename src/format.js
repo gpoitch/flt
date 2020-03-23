@@ -12,4 +12,4 @@ const recommendedArgs = [
   .filter(Boolean)
   .join(' ')
 
-module.exports = opts => run('prettier', opts, recommendedArgs)
+module.exports = (opts) => run('prettier', opts, recommendedArgs)

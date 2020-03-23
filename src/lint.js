@@ -12,7 +12,7 @@ const recommendedArgs = [
   .filter(Boolean)
   .join(' ')
 
-module.exports = opts => {
+module.exports = (opts) => {
   process.env.DEBUG = 'eslint:cli-engine'
   return run('eslint', opts, recommendedArgs)
 }

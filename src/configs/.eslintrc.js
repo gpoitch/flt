@@ -5,30 +5,23 @@ module.exports = {
   settings: {
     react: { version: 'detect' },
     node: {
-      tryExtensions: ['.js', '.json', '.ts']
+      tryExtensions: ['.js', '.json', '.ts', '.d.ts', '.tsx']
     }
   },
-  globals: {
-    // mocha (sans 'context')
-    describe: true,
-    it: true,
-    before: true,
-    after: true,
-    beforeEach: true,
-    afterEach: true
-  },
+  plugins: ['@typescript-eslint', 'node', 'css-modules', 'react-hooks'],
   extends: [
     'eslint:recommended',
+    'plugin:@typescript-eslint/eslint-recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:react/recommended',
     'prettier',
     'prettier/react',
     'prettier/@typescript-eslint'
   ],
-  plugins: ['@typescript-eslint', 'node', 'css-modules', 'react-hooks'],
   rules: {
     // Enforce
     'no-console': 'error',
+    'no-empty': ['error', { allowEmptyCatch: true }],
     'no-param-reassign': 'error',
     'no-var': 'error',
     'object-shorthand': 'error',
@@ -46,13 +39,19 @@ module.exports = {
     // Disable (i.e. override extends)
     'prefer-rest-params': 'off',
     'react/no-unescaped-entities': 'off',
+    'react/no-unknown-property': 'off',
     'react/react-in-jsx-scope': 'off',
     'react/prop-types': 'off',
     '@typescript-eslint/camelcase': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/no-explicit-any': 'off',
     '@typescript-eslint/no-use-before-define': 'off',
-    '@typescript-eslint/no-var-requires': 'off',
-    '@typescript-eslint/no-empty-function': 'off'
-  }
+    '@typescript-eslint/no-var-requires': 'off'
+  },
+  overrides: [
+    {
+      files: ['*.test.*'],
+      env: { mocha: true }
+    }
+  ]
 }
