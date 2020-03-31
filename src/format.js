@@ -2,7 +2,7 @@ const run = require('./run')
 const hasOwnConfig = require('./has-own-config')
 
 const hasOwnFormatConfig = hasOwnConfig('prettier')
-const configPath = !hasOwnFormatConfig && require.resolve('./configs/.prettierrc.js')
+const configPath = !hasOwnFormatConfig && require.resolve('../config/prettier.config.js')
 const recommendedArgs = [
   '"**/*.{js,ts,css,html,json,md,graphql}"',
   '--ignore-path .gitignore',

@@ -1,6 +1,6 @@
 {
   "name": "flt",
-  "version": "0.23.0",
+  "version": "0.24.0",
   "description": "Format, Lint, Test",
   "author": "Garth Poitras <garth22@gmail.com>",
   "license": "MIT",
@@ -8,7 +8,8 @@
   "main": "src/index.js",
   "bin": "src/bin.js",
   "files": [
-    "src"
+    "src",
+    "config"
   ],
   "keywords": [
     "format",
@@ -16,7 +17,7 @@
     "test"
   ],
   "scripts": {
-    "test": "prettier '{src/**/*.{js,ts},README.md}' --config src/configs/.prettierrc.js --write && DEBUG=eslint:cli-engine eslint 'src/**/*.{js,ts}' --config src/configs/.eslintrc.js --fix",
+    "test": "prettier '{src/**/*.{js,ts},README.md}' --write && DEBUG=eslint:cli-engine eslint 'src/**/*.{js,ts}' --config config/eslint.config.js --fix",
     "test-flt-all": "./src/bin.js",
     "test-flt-single": "./src/bin.js format",
     "test-flt-args": "./src/bin.js format test/*.js --single-quote"
@@ -39,11 +40,5 @@
     "typescript": "*",
     "react": "*"
   },
-  "prettier": {
-    "printWidth": 120,
-    "semi": false,
-    "singleQuote": true,
-    "jsxBracketSameLine": true,
-    "trailingComma": "none"
-  }
+  "prettier": "./config/prettier.config.js"
 }
