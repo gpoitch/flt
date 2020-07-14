@@ -1,6 +1,6 @@
 {
   "name": "flt",
-  "version": "0.29.0",
+  "version": "0.30.0",
   "description": "Format, Lint, Test",
   "author": "Garth Poitras <garth22@gmail.com>",
   "license": "MIT",
@@ -35,7 +35,7 @@
     "eslint-plugin-react-hooks": "^4.0.8",
     "mocha": "^8.0.1",
     "prettier": "^2.0.5",
-    "yargs": "^15.4.1"
+    "yargs": "^15.3.1"
   },
   "optionalDependencies": {
     "typescript": "*",
