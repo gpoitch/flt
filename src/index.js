@@ -3,7 +3,6 @@ const lint = require('./lint')
 const test = require('./test')
 
 const cli = require('yargs')
-  .command('', 'Format, lint & test your code')
   .command('format', 'Format your code with prettier', {}, format)
   .command('lint', 'Lint your code with eslint', {}, lint)
   .command('test', 'Test your code with mocha', {}, test)

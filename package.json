@@ -1,6 +1,6 @@
 {
   "name": "flt",
-  "version": "0.30.0",
+  "version": "0.31.0",
   "description": "Format, Lint, Test",
   "author": "Garth Poitras <garth22@gmail.com>",
   "license": "MIT",
@@ -18,9 +18,10 @@
   ],
   "scripts": {
     "test": "prettier '{src/**/*.{js,ts},README.md}' --write && DEBUG=eslint:cli-engine eslint 'src/**/*.{js,ts}' --config config/eslint.config.js --fix",
-    "test-flt-all": "./src/bin.js",
-    "test-flt-single": "./src/bin.js format",
-    "test-flt-args": "./src/bin.js format test/*.js --single-quote"
+    "test-flt-all": "flt",
+    "test-flt-single": "flt lint",
+    "test-flt-args": "flt format test/*.js --single-quote",
+    "help": "flt --help"
   },
   "dependencies": {
     "@types/mocha": "^8.0.0",
@@ -35,7 +36,10 @@
     "eslint-plugin-react-hooks": "^4.0.8",
     "mocha": "^8.0.1",
     "prettier": "^2.0.5",
-    "yargs": "^15.3.1"
+    "yargs": "^15.4.0"
+  },
+  "devDependencies": {
+    "flt": "file:./"
   },
   "optionalDependencies": {
     "typescript": "*",
