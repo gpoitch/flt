@@ -1,3 +1,6 @@
+// Restrict certain global variables available in the browser env. They could be confused with user code which wouldn't be caught if undefined and cause runtime bugs. They are still accessible through window.
+const restrictedGlobals = ['event', 'external', 'length', 'name', 'open', 'opener', 'parent', 'print', 'screen', 'self']
+
 module.exports = {
   parser: '@typescript-eslint/parser',
   parserOptions: { jsx: true, sourceType: 'module' },
@@ -5,23 +8,17 @@ module.exports = {
   settings: {
     react: { version: 'detect' },
     node: {
-      tryExtensions: ['.js', '.json', '.ts', '.d.ts', '.tsx']
+      tryExtensions: ['.js', '.jsx', '.json', '.ts', '.d.ts', '.tsx']
     }
   },
   plugins: ['@typescript-eslint', 'node', 'css-modules', 'react-hooks'],
-  extends: [
-    'eslint:recommended',
-    'plugin:@typescript-eslint/recommended',
-    'plugin:react/recommended',
-    'prettier',
-    'prettier/react',
-    'prettier/@typescript-eslint'
-  ],
+  extends: ['eslint:recommended', 'plugin:@typescript-eslint/recommended', 'plugin:react/recommended', 'prettier'],
   rules: {
     // Enforce
     'no-console': 'error',
     'no-empty': ['error', { allowEmptyCatch: true }],
     'no-param-reassign': 'error',
+    'no-restricted-globals': ['error'].concat(restrictedGlobals),
     'no-var': 'error',
     'object-shorthand': 'error',
     'prefer-const': 'error',
