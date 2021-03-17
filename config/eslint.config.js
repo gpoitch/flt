@@ -1,3 +1,5 @@
+const path = require('path')
+
 // Restrict certain global variables available in the browser env. They could be confused with user code which wouldn't be caught if undefined and cause runtime bugs. They are still accessible through window.
 const restrictedGlobals = ['event', 'external', 'length', 'name', 'open', 'opener', 'parent', 'print', 'screen', 'self']
 
@@ -8,7 +10,8 @@ module.exports = {
   settings: {
     react: { version: 'detect' },
     node: {
-      tryExtensions: ['.js', '.jsx', '.json', '.ts', '.d.ts', '.tsx']
+      tryExtensions: ['.js', '.jsx', '.json', '.ts', '.d.ts', '.tsx'],
+      resolvePaths: [path.resolve('node_modules/@types')]
     }
   },
   plugins: ['@typescript-eslint', 'node', 'css-modules', 'react-hooks'],
