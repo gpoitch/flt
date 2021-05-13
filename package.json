@@ -1,6 +1,6 @@
 {
   "name": "flt",
-  "version": "0.39.0",
+  "version": "0.40.0",
   "description": "Format, Lint, Test",
   "author": "Garth Poitras <garth22@gmail.com>",
   "license": "MIT",
@@ -25,17 +25,17 @@
   },
   "dependencies": {
     "@types/mocha": "^8.2.2",
-    "@typescript-eslint/eslint-plugin": "^4.22.1",
-    "@typescript-eslint/parser": "^4.22.1",
+    "@typescript-eslint/eslint-plugin": "^4.23.0",
+    "@typescript-eslint/parser": "^4.23.0",
     "chalk": "^4.1.1",
-    "eslint": "^7.25.0",
+    "eslint": "^7.26.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-css-modules": "^2.11.0",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-react": "^7.23.2",
     "eslint-plugin-react-hooks": "^4.2.0",
     "mocha": "^8.4.0",
-    "prettier": "^2.2.1",
+    "prettier": "^2.3.0",
     "yargs": "^17.0.1"
   },
   "devDependencies": {
