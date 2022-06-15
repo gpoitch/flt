@@ -4,7 +4,7 @@ const hasOwnConfig = require('./has-own-config')
 const hasOwnLintConfig = hasOwnConfig('eslint', 'eslintConfig')
 const configPath = !hasOwnLintConfig && require.resolve('../config/eslint.config.js')
 const recommendedArgs = [
-  '. --ext .js,.ts,.tsx',
+  '. --ext .js,.ts,.jsx,.tsx',
   '--ignore-path .gitignore',
   !hasOwnLintConfig && `--config "${configPath}"`,
   !process.env.CI && '--cache --fix'
