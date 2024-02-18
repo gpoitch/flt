@@ -1,7 +1,7 @@
 # FLT: Format, Lint, Test
 
 An all-in-one opinionated package for javascript code formatting, linting, and testing.
-Uses prettier, eslint, standard, and mocha.
+Uses prettier, eslint (+plugins), and mocha.
 
 I was tired of installing ~10 dependenies and copying the same scripts into every project in order to get clean, dependable, and tested code.
 
